@@ -14,9 +14,9 @@
  }
 
  .container {
-     width: 80%;
-     margin: 0% auto;
-     
+    width: 80%;
+    margin: 0% auto;
+    
  }
 
 .faixa-menu {
@@ -24,7 +24,7 @@
     width: 260px;
     -webkit-box-shadow: 5px 5px 50px 8px rgba(0,0,0,0.59); 
     box-shadow: 5px 5px 50px 8px rgba(0,0,0,0.59);
-    margin right: auto;i
+    margin right: auto;
 }
 
 ul {
@@ -104,5 +104,83 @@ ul li:hover {
     background: #4a5494;
 }
 
+.registrar {
+    width: 400px;
+    padding: 60px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgb(45, 49, 48);
+    text-align: center;
+    border-radius: 10px;
+    -webkit-box-shadow: 5px 5px 50px 8px rgba(0,0,0,0.59); 
+    box-shadow: 5px 5px 50px 8px rgba(0,0,0,0.59);
+}
+
+.registrar input[type = "text"],.registrar input[type = "password"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #4a5494;
+    padding: 8px 8px;
+    width: 200px;
+    outline: none;
+    color: rgb(221, 221, 221);
+    border-radius: 20px;
+    transition: 0.25s;
+}
+
+.registrar h1 {
+    color: #070707;
+    font-family: sans-serif;
+    font-size: 35px;
+}
+
+.registrar input[type = "text"]:focus,.registrar input[type = "password"]:focus {
+    width: 210px;
+}
+
+.registrar butto {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #4a5494;
+    padding: 8px 8px;
+    width: 180px;
+    outline: none;
+    color: rgb(221, 221, 221);
+    border-radius: 20px;
+    transition: 0.25s;
+    cursor: grabbing ;
+}
+
+.registrar button  {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #4a5494;
+    padding: 8px 8px;
+    width: 100px;
+    outline: none;
+    background-color: rgb(45, 49, 48);
+    border-radius: 20px;
+    transition: 0.25s;
+    cursor: grabbing ;
+}
+
+.registrar input[type = "submit"]:hover {
+    background: #4a5494;
+}
+
+.registrar button:hover {
+    background: #4a5494;
+}
 
 
