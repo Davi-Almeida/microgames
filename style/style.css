@@ -1,186 +1,486 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
 * {
     padding: 0;
     margin: 0;
     border: 0;
     box-sizing: border-box;
-
-
+    font-family: "Poppins" sans-serif;
 }
- body {
+
+html {
     width: 100%;
-    background-color: #666;
-    font-family: sans-serif;
-    background-color: #44475a;
- }
-
- .container {
-    width: 80%;
-    margin: 0% auto;
-    
- }
-
-.faixa-menu {
-    border: 2px solid #4a5494;
-    width: 260px;
-    -webkit-box-shadow: 5px 5px 50px 8px rgba(0,0,0,0.59); 
-    box-shadow: 5px 5px 50px 8px rgba(0,0,0,0.59);
-    margin right: auto;
+    height: 100%;
 }
 
-ul {
-    position: relative;
-    background: gray;
-    margin: 0px;
-    padding: 5px;
-}
-
-ul li {
-    display: inline-block;
-}
-
-ul li a {
-    text-decoration: none;
-    color: white;
-    padding: 15px;
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
     display: flex;
-    cursor: -webkit-grab;
 }
 
-ul li:hover {
-    background: transparent white;
-    
+.container {
+    width: 100%;
+    min-height: 100%;
+}
+
+h2,
+h3 {
+    font-weight: 600;
+    margin-bottom: 2rem;
+    position: relative;
+    margin-top: 25px;
+}
+
+h2::before {
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 25px;
+    bottom: 3px;
+    left: 0;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #3498db, #3498db);
+}
+
+.barra-navegacao {
+    height: 100%;
+    position: fixed;
+    width: 180px;
+    border: 1px black solid;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #2c3e50;
+}
+
+.barra-navegacao a {
+    width: 100%;
+    height: calc(100% / 6);
+    text-decoration: none;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    border-left: 10px solid transparent;
+}
+
+.barra-navegacao a:hover {
+    background-color: #34495e;
+    transition: all 600ms ease-in-out;
+    border-left: 10px solid #006db6;
+}
+
+.barra-navegacao a.active {
+    background-color: #2c3e50;
+    border-left: 10px solid #006db6;
+}
+
+.barra-navegacao a i {
+    margin-right: 10px;
+}
+
+.content {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+    padding: 30px;
+    background-color: white;
+}
+
+.posts {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.posts .post-card {
+    width: 50%;
+    padding: 25px;
+}
+
+.posts .post-card .post-cover img {
+    width: 50%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.button {
+    margin-top: 2rem;
+    padding: 0.4rem;
+    width: 30%;
+    color: #535353;
+    cursor: pointer;
+    background-color: #949494;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    color: #fff;
+}
+
+.button:hover {
+    letter-spacing: 1px;
+    background-color: #3498db;
+}
+
+.underline {
+    background-color: red;
+}
+
+.field-block .underline::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.field-block .underline::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: linear-gradient(45deg, #3498db, #3498db);
+    transform: scaleX(0);
+    transition: all .3s ease-in-out;
+    transform-origin: left;
+}
+
+.field-block input:focus~.underline::after {
+    transform: scaleX(1);
+}
+
+.field-block input {
+    outline: none;
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+}
+
+.field-block input::placeholder {
+    color: rgba(0, 0, .field-block);
 }
 
 .login {
-    width: 400px;
-    padding: 60px;
+    width: 100%;
+    height: 710px;
+    display: flex;
+    align-items: flex-start;
+    border-radius: 90px;
+    box-shadow: 0 0 10px #BDC3C7;
+    padding: 2rem;
+    box-shadow: 10px 10px 25px #3498db;
+    border-radius: 8px;
+}
+
+.login-img {
+    width: 50%;
+    background-image: url(../images/login-img.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    border-radius: 0 5px 5px 0;
+}
+
+.login-img p {
+    font-size: 22px;
+    font-weight: 900;
+    text-align: center;
+    margin-top: 10%;
+    color: #fff;
+}
+
+.login-form {
+    width: 50%;
+    background: #fff;
+    height: 100%;
+    border-radius: 5px 0 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.field-block label {
+    display: block;
+    margin-bottom: 2%;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: left;
+}
+
+.field-block {
+    position: relative;
+}
+
+.field-raiz {
+    width: 75%;
+}
+
+.field-block input {
+    display: flex;
+    padding: 7px;
+    margin-bottom: 12px;
+    width: 100%;
+    border-radius: 3px;
+}
+
+.login-form-action {
+    display: flex;
+    justify-content: space-between;
+}
+
+.reemember-block {
+    font-size: 14px;
+    vertical-align: middle;
+    position: relative;
+    bottom: 1px;
+    top: 15;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+.footer span {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.footer .social-field {
+    padding: 0.4rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    width: 100%;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.footer .social-field a i {
+    margin: 0 0.5rem;
+    width: 15px;
+}
+
+.footer .social-field a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer .social-field.twitter {
+    background: linear-gradient(to right, #56a7f2, #468aca);
+}
+
+.footer .social-field.facebook {
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+}
+
+form label span {
+    font-size: 1.1rem;
+    margin-top: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+    .login-img {
+        display: none;
+    }
+    .login-form {
+        width: 100%;
+    }
+}
+
+.container main {
+    width: 90%;
+    margin: 0% auto;
+    height: 100%;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #d8d8d8;
+    height: 935px;
+    top: 0;
+    width: 50%;
+    background-color: white;
+    padding: 8%;
+}
+
+.input-field {
+    position: relative;
+}
+
+.form .input-field {
+    margin-bottom: 1.5rem;
+}
+
+.input-field .underline::before {
+    content: '';
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    background-color: rgb(45, 49, 48);
-    text-align: center;
-    border-radius: 10px;
-    -webkit-box-shadow: 5px 5px 50px 8px rgba(0,0,0,0.59); 
-    box-shadow: 5px 5px 50px 8px rgba(0,0,0,0.59);
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
 }
 
-.login input[type = "email"],.login input[type = "password"] {
-    border: 0;
-    background: none;
-    display: block;
-    margin: 20px auto;
-    text-align: center;
-    border: 2px solid #4a5494;
-    padding: 8px 8px;
-    width: 200px;
-    outline: none;
-    color: rgb(221, 221, 221);
-    border-radius: 20px;
-    transition: 0.25s;
-}
-
-.login input[type = "email"]:focus,.login input[type = "password"]:focus {
-    width: 210px;
-}
-
-.login   button  {
-    border: 0;
-    background: none;
-    display: block;
-    margin: 20px auto;
-    text-align: center;
-    border: 2px solid #4a5494;
-    padding: 8px 8px;
-    width: 100px;
-    outline: none;
-    background-color: rgb(45, 49, 48);
-    border-radius: 20px;
-    transition: 0.25s;
-    cursor: grabbing ;
-}
-
-.login button:hover {
-    background: #4a5494;
-}
-
-.registrar {
-    width: 400px;
-    padding: 60px;
+.input-field .underline::after {
+    content: '';
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    background-color: rgb(45, 49, 48);
-    text-align: center;
-    border-radius: 10px;
-    -webkit-box-shadow: 5px 5px 50px 8px rgba(0,0,0,0.59); 
-    box-shadow: 5px 5px 50px 8px rgba(0,0,0,0.59);
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: linear-gradient(45deg, #3498db, #3498db);
+    transform: scaleX(0);
+    transition: all .3s ease-in-out;
+    transform-origin: left;
 }
 
-.registrar input[type = "text"],.registrar input[type = "password"] {
-    border: 0;
-    background: none;
-    display: block;
-    margin: 20px auto;
-    text-align: center;
-    border: 2px solid #4a5494;
-    padding: 8px 8px;
-    width: 200px;
+.input-field input:focus~.underline::after {
+    transform: scaleX(1);
+}
+
+.input-field input {
     outline: none;
-    color: rgb(221, 221, 221);
-    border-radius: 20px;
-    transition: 0.25s;
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.7);
+    width: 100%;
 }
 
-.registrar h1 {
-    color: #070707;
-    font-family: sans-serif;
-    font-size: 35px;
+.input-field input::placeholder {
+    color: rgba(0, 0, 0, 0.5);
 }
 
-.registrar input[type = "text"]:focus,.registrar input[type = "password"]:focus {
-    width: 210px;
+.form input[type="submit"] {
+    margin-top: 2rem;
+    padding: 0.4rem;
+    width: 50%;
+    color: #535353;
+    cursor: pointer;
+    background-color: #949494;
+    font-size: 0.9rem;
+    font-weight: 300;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    color: #fff;
 }
 
-.registrar butto {
-    border: 0;
-    background: none;
-    display: block;
-    margin: 20px auto;
+.form input[type="submit"]:hover {
+    letter-spacing: 0.5px;
+    background-color: #3498db;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    padding: -6%;
+}
+
+.footer span {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 0.8rem;
     text-align: center;
-    border: 2px solid #4a5494;
-    padding: 8px 8px;
-    width: 180px;
-    outline: none;
-    color: rgb(221, 221, 221);
-    border-radius: 20px;
-    transition: 0.25s;
-    cursor: grabbing ;
+    padding: 10px;
 }
 
-.registrar button  {
-    border: 0;
-    background: none;
-    display: block;
-    margin: 20px auto;
+.footer .social-field {
+    padding: 0.4rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    width: 100%;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.footer .social-field a i {
+    margin: 0 0.5rem;
+    width: 15px;
+}
+
+.footer .social-field a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer .social-field.twitter {
+    background: linear-gradient(to right, #56a7f2, #468aca);
+}
+
+.footer .social-field.facebook {
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+}
+
+.cadastro-img {
+    width: 50%;
+    background-image: url(../images/login-img.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    border-radius: 0 5px 5px 0;
+}
+
+.cadastro-img p {
+    font-size: 22px;
+    font-weight: 900;
     text-align: center;
-    border: 2px solid #4a5494;
-    padding: 8px 8px;
-    width: 100px;
+    margin-top: 10%;
+    color: #fff;
+}
+
+.cadastro {
+    width: 70%;
+    margin: 20px auto;
+    height: 1007px;
+    display: flex;
+    align-items: flex-start;
+    padding: 2%;
+    box-shadow: 9px 9px 25px #3498db;
+    border-radius: 5px;
+}
+
+.content-about h1,
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.field-block label {
+    margin-bottom: 1%;
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    text-align: left;
+}
+
+.field-block input,
+.field-block textarea {
+    display: block;
+    border: 1px solid rgb(124, 124, 124);
+    width: 100%;
+    margin-bottom: 20px;
     outline: none;
-    background-color: rgb(45, 49, 48);
-    border-radius: 20px;
-    transition: 0.25s;
-    cursor: grabbing ;
 }
 
-.registrar input[type = "submit"]:hover {
-    background: #4a5494;
+.btn {
+    margin-top: 2rem;
+    padding: 0.4rem;
+    width: 10%;
+    color: #535353;
+    cursor: pointer;
+    background-color: #949494;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    color: #fff;
 }
 
-.registrar button:hover {
-    background: #4a5494;
+.btn:hover {
+    letter-spacing: 1px;
+    background-color: #3498db;
 }
-
-

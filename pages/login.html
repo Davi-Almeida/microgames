@@ -1,42 +1,87 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html> -->
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://kit.fontawesome.com/1ab94d0eba.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="icon" href="../images/logo-site.png" sizes="144x144">
     <title>microgames</title>
 </head>
+
 <body>
     <div class="container">
-
-        <div class="faixa-menu">   
-            <ul>    
-              <li><a href="../index.html">Home</a></li>
-              <li><a href="cadastro.html">Cadastro</a></li>
-              <li><a href="login.html">Login</a></li>
-            </ul>
+        <div class="barra-navegacao">
+            <a href="../index.html"><i class="fas fa-home"></i> Home</a>
+            <a href="posts.html"><i class="fas fa-blog"></i> Posts</a>
+            <a href="about.html"><i class="fas fa-suitcase"></i>Empresa</a>
+            <a href="register.html"><i class="fas fa-external-link-alt"></i>Register</a>
+            <a class="active" href="login.html"><i class="fas fa-sign-in-alt"></i>Login</a>
         </div>
-        
-        <div class="login">
-            <form action=""> 
-                <div>
-                    <h1>Registre-se</h1>
-                    <input type="email" placeholder="Email">
-                </div>        
-            </form>
-            <div>
-                <form action=""> 
-                           
-                        <input type="password" placeholder="Password">                    
-                    
-                    <button>
-                        Entrar
-                    </button>      
+
+        <div class="content">
+            <div class="login">
+                <form class="login-form" action="">
+                    <div class="field-raiz">
+                        <h2>Login</h2>
+                        <div class="field-block">
+                            <!-- <label for="email"><i class="fas fa-envelope-square"></i> E-mail</label> -->
+                            <input type="email" id="email" placeholder="Insira Seu E-mail">
+                            <div class="underline"></div>
+                        </div>
+                        <div class="field-block">
+                            <!-- <label for=""><i class="fas fa-key"></i> Senha</label> -->
+                            <input type="senha" id="senha" placeholder="Insira Sua Snha" minlength="8">
+                            <div class="underline"></div>
+                        </div>
+
+                        <div class="login-form-action">
+
+                            <div class="reemember-block">
+                                <input type="checkbox" id="reemember">
+                                <label for="reemember">Mantenha-me conectado</label>
+                            </div>
+
+                        </div>
+                        <button class="button"> Entrar</button>
+
+                        <div class="footer">
+                            <span>OU</span>
+                            <div class="social-fields">
+                                <div class="social-field twitter">
+                                    <a href="#">
+                                        <i class="fab fa-twitter"></i> Sign in with Twitter
+                                    </a>
+                                </div>
+                                <div class="social-field facebook">
+                                    <a href="#">
+                                        <i class="fab fa-facebook-f"></i> Sign in with Facebook
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="link">
+
+                            <p>Não posssui conta ? <a href="./cadastro.html">Cadastre-se aqui</a></p>
+
+                        </div>
+
+                    </div>
                 </form>
+
+                <div class="login-img">
+                    <p> MicroGames</p>
+                </div>
+
             </div>
         </div>
-
     </div>
+
 </body>
+
 </html>
